@@ -1,0 +1,39 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RateMyAir_Mobile.MainPage"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView>
+        <Grid RowSpacing="25"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <gauge:SfRadialGauge>
+                <gauge:SfRadialGauge.Axes>
+                    <gauge:RadialAxis Interval="10"
+                          Maximum="150" >
+                        <gauge:RadialAxis.Ranges>
+                            <gauge:RadialRange StartValue="0"
+                                  EndValue="50"
+                                  Fill="Red" />
+                            <gauge:RadialRange StartValue="50"
+                                  EndValue="100"
+                                  Fill="Orange" />
+                            <gauge:RadialRange StartValue="100"
+                                  EndValue="150"
+                                  Fill="Green" />
+                        </gauge:RadialAxis.Ranges>
+                    </gauge:RadialAxis>
+                </gauge:SfRadialGauge.Axes>
+            </gauge:SfRadialGauge>
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
